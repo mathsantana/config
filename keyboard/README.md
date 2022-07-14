@@ -1,6 +1,6 @@
 # Adding custom keyboard layout
 
-The US layout doesn't provide some accents to be used. But, using a custom [EurKEY layout](https://eurkey.steffen.bruentjen.eu/), we can have some the majority of the needed symbols.
+The US layout doesn't provide some accents and special characters that a portuguese user needs. But, using a custom [EurKEY layout](https://eurkey.steffen.bruentjen.eu/), we can have some the majority of the needed symbols.
 
 These are the steps to do so:
 
@@ -45,6 +45,8 @@ ln -s $HOME/config/keyboard/symbols/cstm /usr/share/X11/xkb/symbols/cstm
     </configItem>
   </layout>
 ```
+  * Make sure that the name inside `<name>` tag is equal to file name of the previous step.
+
 
 3. Restart to apply changes:
   * Using below command, it's not necessary to restart your PC: 
