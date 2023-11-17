@@ -1,6 +1,7 @@
 local lsp_zero = require('lsp-zero')
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
+local lspconfig = require("lspconfig")
 
 lsp_zero.configure('lua_ls', {
     cmd = { 'lua-language-server' },
@@ -83,3 +84,33 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
+-- Python config
+
+-- lspconfig.pylsp.setup {
+--     settings = {
+--         pylsp = {
+--         plugins = {
+--             -- formatter options
+--             black = { enabled = false },
+--             autopep8 = { enabled = false },
+--             yapf = { enabled = true },
+--             -- linter options
+--             pylint = { enabled = true, executable = "pylint" },
+--             pyflakes = { enabled = false },
+--             pycodestyle = { enabled = false },
+--             -- type checker
+--             pylsp_mypy = { enabled = true },
+--             -- auto-completion options
+--             jedi_completion = { fuzzy = true },
+--             -- import sorting
+--             pyls_isort = { enabled = true },
+--             rope_autoimport = {
+--                 enabled = true
+--             }
+--         },
+--         },
+--     },
+--     flags = {
+--         debounce_text_changes = 200,
+--     },
+-- }

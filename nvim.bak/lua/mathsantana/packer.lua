@@ -9,6 +9,11 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   })
 
+  use({
+    'nvimtools/none-ls.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  })
+
   use({ 'rose-pine/neovim', as = 'rose-pine' })
 
   use({
@@ -21,6 +26,10 @@ return require('packer').startup(function(use)
 
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('tpope/vim-commentary')
+  use({"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end})
 
   use({
     'VonHeikemen/lsp-zero.nvim',
